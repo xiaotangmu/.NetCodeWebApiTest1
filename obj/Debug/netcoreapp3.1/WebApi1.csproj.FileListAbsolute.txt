@@ -54,5 +54,12 @@ F:\vsDeveloper\WebTest2\WebTest2\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Pr
 F:\vsDeveloper\WebTest2\WebTest2\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
 F:\vsDeveloper\WebTest2\WebTest2\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
 F:\vsDeveloper\WebTest2\WebTest2\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+F:\vsDeveloper\WebTest2\WebTest2\bin\Debug\netcoreapp3.1\Npgsql.dll
 F:\vsDeveloper\WebTest2\WebTest2\obj\Debug\netcoreapp3.1\WebApi1.csproj.CoreCompileInputs.cache
 F:\vsDeveloper\WebTest2\WebTest2\obj\Debug\netcoreapp3.1\WebApi1.MvcApplicationPartsAssemblyInfo.cache
+F:\vsDeveloper\WebTest2\WebTest2\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+F:\vsDeveloper\WebTest2\WebTest2\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+F:\vsDeveloper\WebTest2\WebTest2\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+F:\vsDeveloper\WebTest2\WebTest2\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+F:\vsDeveloper\WebTest2\WebTest2\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+F:\vsDeveloper\WebTest2\WebTest2\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

@@ -1,11 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Threading.Tasks;
 using log4net;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using WebApi1.Beans;
+using WebApi1.Config;
+using WebApi1.DB;
+using WebApi1.Services;
 
 namespace WebApi1.Controllers
 {
@@ -14,9 +19,19 @@ namespace WebApi1.Controllers
     public class UserController : Controller
     {
 
-        public string GetAll(string name)
+
+        private readonly UserService _userService;
+
+        public UserController(UserService userService)
         {
-            return name;
+            _userService = userService;
+        }
+
+        public string GetAll()
+        {
+            int i = 1;
+            string dataBase = DbConnTypeStorage.defaultDbConnString;
+            return dataBase;
         }
 
         [HttpPost]
@@ -24,7 +39,13 @@ namespace WebApi1.Controllers
         {
 
             int i = 1;
+
+
+            
+
             User user = new Beans.User(1, "tan", "123456");
+
+            _userService.getAll();
             return user;
         }
 
