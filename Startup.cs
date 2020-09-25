@@ -16,6 +16,8 @@ using WebApi1.Services.Impl;
 using System.ComponentModel;
 using WebApi1.utils;
 using WebApi1.Dao;
+using Microsoft.Extensions.Logging;
+using log4net.Repository.Hierarchy;
 
 namespace WebTest2
 {
@@ -26,12 +28,12 @@ namespace WebTest2
         /// </summary>
         private IServiceCollection _services;
 
+        public IConfiguration Configuration { get; }
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
-
-        public IConfiguration Configuration { get; }
 
         /// <summary>
         /// 配置服务，在运行时被调用
@@ -42,8 +44,6 @@ namespace WebTest2
         /// <param name="services">服务集合</param>
         public void ConfigureServices(IServiceCollection services)
         {
-
-
 
             //添加配置可以注入controller
             //services.Configure<TokenProviderOptions>(Configuration.GetSection("Jwt"));

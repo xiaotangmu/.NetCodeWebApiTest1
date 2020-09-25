@@ -7,8 +7,10 @@ using log4net;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using WebApi1.Beans;
 using WebApi1.Config;
+using WebApi1.Dao;
 using WebApi1.DB;
 using WebApi1.Services;
 
@@ -18,20 +20,23 @@ namespace WebApi1.Controllers
     [Route("api/[Controller]/[action]")]
     public class UserController : Controller
     {
-
+        private readonly UserDao userDao;
 
         private readonly UserService _userService;
+        private readonly ILogger _logger;
 
-        public UserController(UserService userService)
+        public UserController(UserService userService, ILogger<UserController> logger)
         {
             _userService = userService;
+            _logger = logger;
         }
 
-        public string GetAll()
+        public List<User> GetAll()
         {
+            _logger.LogInformation("#########################");
             int i = 1;
-            string dataBase = DbConnTypeStorage.defaultDbConnString;
-            return dataBase;
+            List<User> list = _userService.getAll();
+            return list;
         }
 
         [HttpPost]

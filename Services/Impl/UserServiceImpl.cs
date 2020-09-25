@@ -17,7 +17,7 @@ namespace WebApi1.Services.Impl
         }
         public List<User> getAll()
         {
-            
+            return _userDao.selectAll();
         }
 
         public void update()

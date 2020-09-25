@@ -10,14 +10,26 @@ namespace WebApi1.Dao
 {
     public class UserDao
     {
-        public async List<User> selectAll()
+        public List<User> selectAll()
         {
+            List<User> list = new List<User>();
             string connstr = DbConnTypeStorage.defaultDbConnString;
             SqlConnection connection = new SqlConnection(connstr);
             SqlCommand command = connection.CreateCommand();
+            SqlDataReader reader = null;
             command.CommandText = "select * from t_user";
-            await connection.OpenAsync();
-            var object = await command.ExecuteReader();
-
+            connection.Open();
+            reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                if (reader.HasRows)
+                {
+                    Console.WriteLine(reader.GetInt32(2) + ":" + reader.GetString(0) + ":" + reader.GetString(1));
+                    User user = new User(reader.GetInt32(2), reader.GetString(0), reader.GetString(1));
+                    list.Add(user);
+                }
+            }
+            return list;
+        }
     }
 }

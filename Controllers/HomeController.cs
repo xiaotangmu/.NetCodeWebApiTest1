@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using WebTest2.Models;
 using Swashbuckle.Swagger.Annotations;
+using WebApi1.Controllers;
+using WebApi1.Services;
 
 namespace WebTest2.Controllers
 {
@@ -42,5 +44,6 @@ namespace WebTest2.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
     }
 }
